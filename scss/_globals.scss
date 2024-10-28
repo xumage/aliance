@@ -1,0 +1,25 @@
+body {
+    min-height: 100%;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    line-height: 1.28;
+    color: var(--color-gray);
+    background-color: var(--background-color);
+}
+
+a,
+button,
+input {
+    transition-duration: var(--transition-duration);
+}
+
+h1 {
+    @include fluid-text(48, 80);
+}
+
+h2 {
+    @include fluid-text(36, 60);
+
+    color: var(--color-gray-dark);
+    font-family: var(--font-family-alt);
+}

@@ -1,0 +1,19 @@
+:root {
+    --color-accent: #5c8ee5;
+    --color-accent-dark: #3a71d1;
+    --color-gray: #828a99;
+    --color-gray-dark: #292d33;
+    --background-color: #fafbfc;
+
+    --font-family-base: "Noto-sans", sans-serif;
+    --font-family-alt: "Bebas", sans-serif;
+
+    --section-padding-y: 85px;
+
+    --border: 1px solid var(--color-accent);
+
+    --container-width: 1440px;
+    --container-padding-x: 15px;
+
+    --transition-duration: 0.3s;
+}
