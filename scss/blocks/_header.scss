@@ -1,0 +1,44 @@
+.header {
+    &__logo {
+        margin-right: 50px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        background-color: black;
+    }
+
+    &__menu {
+        border-left: 1px solid var(--background-color);
+        padding-block: 31px;
+        padding-left: 50px;
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 50px;
+        }
+
+        &-link {
+            padding-block: 30px;
+        }
+    }
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    &__link {
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+        column-gap: 14px;
+    }
+    &__button {
+        padding: 34px 50px;
+        background-color: var(--color-accent);
+        color: #fff;
+    }
+}

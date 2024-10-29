@@ -4,6 +4,12 @@
     padding-inline: var(--container-padding-x);
 }
 
+.container-big {
+    max-width: 1920px;
+    padding-left: 50px;
+    margin-inline: auto;
+}
+
 .visually-hidden {
     @include visually-hidden;
 }
