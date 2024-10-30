@@ -1,28 +1,17 @@
 .header {
+    border: 1px solid var(--background-color);
     &__logo {
         margin-right: 50px;
+
+        @include desktop-s {
+            margin-right: 25px;
+        }
     }
 
     &__inner {
         display: flex;
         align-items: center;
         background-color: black;
-    }
-
-    &__menu {
-        border-left: 1px solid var(--background-color);
-        padding-block: 31px;
-        padding-left: 50px;
-
-        &-list {
-            display: flex;
-            align-items: center;
-            column-gap: 50px;
-        }
-
-        &-link {
-            padding-block: 30px;
-        }
     }
 }
 
@@ -35,10 +24,16 @@
         align-items: center;
         margin-right: 50px;
         column-gap: 14px;
+        color: #fff;
     }
     &__button {
         padding: 34px 50px;
         background-color: var(--color-accent);
         color: #fff;
+        font-weight: 600;
+
+        &:hover {
+            background-color: var(--color-accent-dark);
+        }
     }
 }
