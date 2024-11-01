@@ -1,0 +1,11 @@
+.button {
+    background-color: var(--color-accent);
+    color: #fff;
+    font-weight: 600;
+    font-family: var(--font-family-base);
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+        background-color: var(--color-accent-dark);
+    }
+}

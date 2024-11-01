@@ -1,0 +1,61 @@
+.hero {
+    background-image: url(../../images/header/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100dvh;
+
+    &__inner {
+        padding-top: 170px;
+    }
+
+    &__title {
+        @include fluid-text(48, 80);
+
+        font-family: var(--font-family-alt);
+        color: #000;
+        line-height: 1.2;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 14%;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            top: 35px;
+            display: block;
+        }
+    }
+
+    &__desc {
+        max-width: 720px;
+        margin-block: 75px;
+    }
+
+    &__button {
+        padding: 25px 60px;
+        margin-bottom: 100px;
+    }
+}
+
+.triggers-list {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    &__item {
+        padding: 30px 50px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        border: 1px solid #ebebf033;
+        flex: 1 0;
+
+        @include desktop {
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,4 +1,8 @@
 @import "reset", "fonts", "mixins", "media", "variables", "utils", "globals";
 
 @import "../scss/blocks/header";
-@import "../scss/blocks/menu";
+@import "../scss/blocks/burger-button";
+@import "../scss/blocks/mobile-menu";
+
+@import "../scss/blocks/button";
+@import "../scss/blocks/hero";
