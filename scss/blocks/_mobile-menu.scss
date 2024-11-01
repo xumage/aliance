@@ -10,13 +10,10 @@
     height: 100%;
     display: none;
 
-    @include desktop-above {
-        display: block;
-    }
-
     &__container {
         padding: 30px 15px 15px 15px;
         background-color: #fff;
+        height: 100%;
     }
 
     &__list {
@@ -33,16 +30,16 @@
     }
 
     &__dropdown {
-        display: flex;
         flex-direction: column;
         padding: 20px;
         padding-right: 0;
         row-gap: 10px;
+        display: none;
+    }
 
-        a {
-            color: var(--color-gray);
-            font-weight: 400;
-        }
+    &__droplink {
+        color: var(--color-gray);
+        font-weight: 400;
     }
 
     .tel {
@@ -60,14 +57,18 @@
         column-gap: 10px;
         margin-bottom: 10px;
     }
+}
 
-    .soc1al-links {
-        display: flex;
-        align-items: center;
-        row-gap: 10px;
+.dropdownSelected.selected .mobile-menu__dropdown {
+    display: flex;
+}
 
-        a {
-            padding: 5px;
-        }
+.soc1al-links {
+    display: flex;
+    align-items: center;
+    row-gap: 10px;
+
+    a {
+        padding: 5px;
     }
 }
