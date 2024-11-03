@@ -1,0 +1,55 @@
+.shema {
+    padding-block: var(--section-padding-y);
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 60px;
+
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 10px;
+        }
+
+        &-item {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        &-counter {
+            color: var(--color-accent);
+            margin-bottom: 35px;
+            font-size: 48px;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: var(--color-gray);
+                position: absolute;
+                top: 25px;
+                left: 70px;
+            }
+        }
+
+        &-title {
+            @include fluid-text(20, 28);
+            color: #000;
+            font-weight: 400;
+            margin-bottom: 20px;
+            margin-top: 35px;
+        }
+
+        &-desc {
+            color: var(--color-gray);
+
+            @include tablet {
+                font-size: 14px;
+            }
+        }
+    }
+}
