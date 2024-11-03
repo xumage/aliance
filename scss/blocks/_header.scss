@@ -1,6 +1,9 @@
 .header {
-    border: 1px solid var(--background-color);
-    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #fff;
 
     &.opened .mobile-menu {
         display: block;
@@ -9,13 +12,20 @@
     &.opened .burger-button span:nth-child(1) {
         rotate: 45deg;
         bottom: 35px;
+        background-color: #000;
     }
     &.opened .burger-button span:nth-child(2) {
         opacity: 0;
+        background-color: #000;
     }
     &.opened .burger-button span:nth-child(3) {
         rotate: -45deg;
         top: 32px;
+        background-color: #000;
+    }
+
+    &__container {
+        border-bottom: 1px solid #fff;
     }
 
     &__logo {
@@ -164,6 +174,7 @@
             display: none;
             background-color: var(--color-accent);
             padding: 26px 32px;
+            z-index: 1;
 
             @include desktop {
                 display: flex;

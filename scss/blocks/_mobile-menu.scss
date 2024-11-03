@@ -1,19 +1,19 @@
 .mobile-menu {
     position: absolute;
-    top: 70px;
+    top: 0px;
     transition-duration: var(--transition-duration);
     right: 0;
     left: 0;
     bottom: 0;
     color: #000;
     font-size: 14px;
-    height: 100%;
+    min-height: 100%;
     display: none;
 
     &__container {
-        padding: 30px 15px 15px 15px;
+        padding: 100px 15px 15px 15px;
         background-color: #fff;
-        height: 100%;
+        min-height: 100vh;
     }
 
     &__list {
@@ -49,6 +49,7 @@
         margin-top: 30px;
         margin-bottom: 20px;
         display: block;
+        z-index: 1;
     }
 
     &__address {

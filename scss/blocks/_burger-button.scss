@@ -5,6 +5,7 @@
     position: relative;
     border-right: 1px solid var(--background-color);
     display: none;
+    z-index: 1;
 
     @include desktop {
         display: block;

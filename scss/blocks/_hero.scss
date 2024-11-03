@@ -1,5 +1,5 @@
 .hero {
-    background-image: url(../../images/header/hero-bg.jpg);
+    background-image: url(../../images/hero/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -7,23 +7,26 @@
 
     &__inner {
         padding-top: 170px;
+
+        @include desktop {
+            padding-top: 120px;
+        }
     }
 
     &__title {
         @include fluid-text(48, 80);
 
         font-family: var(--font-family-alt);
-        color: #000;
         line-height: 1.2;
         position: relative;
 
         &::after {
             content: "";
-            width: 14%;
+            width: 100px;
             height: 2px;
-            background-color: #000;
+            background-color: var(--color-accent);
             position: absolute;
-            top: 35px;
+            top: 0;
             display: block;
         }
     }
@@ -31,17 +34,76 @@
     &__desc {
         max-width: 720px;
         margin-block: 75px;
+
+        @include desktop {
+            margin-block: 40px;
+        }
+    }
+
+    &__swiper-buttons {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+
+        @include laptop-above {
+            display: none;
+        }
+    }
+
+    &__swiper-button-custom {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition-duration: var(--transition-duration);
+        position: relative;
+        border-bottom: 1px solid #ebebf033;
+
+        &:nth-child(1) {
+            border-left: 1px solid #ebebf033;
+        }
+        &:nth-child(2) {
+            border-right: 1px solid #ebebf033;
+        }
+
+        &:hover {
+            background-color: var(--color-accent);
+        }
+    }
+
+    &__swiper-button {
+        position: static;
+        max-width: 30px;
+        margin: 10px 0;
+        display: flex;
+        text-align: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+        }
     }
 
     &__button {
         padding: 25px 60px;
         margin-bottom: 100px;
+
+        @include desktop {
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 }
 
 .triggers-list {
     display: flex;
-    align-items: stretch;
     flex-wrap: nowrap;
     width: 100%;
 
@@ -51,7 +113,8 @@
         flex-direction: column;
         row-gap: 24px;
         border: 1px solid #ebebf033;
-        flex: 1 0;
+        flex-shrink: 0;
+        height: auto;
 
         @include desktop {
             padding: 12px 20px;
