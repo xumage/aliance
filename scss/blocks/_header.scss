@@ -174,7 +174,7 @@
             display: none;
             background-color: var(--color-accent);
             padding: 26px 32px;
-            z-index: 1;
+            z-index: 3;
 
             @include desktop {
                 display: flex;

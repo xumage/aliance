@@ -35,21 +35,5 @@
                 left: 70px;
             }
         }
-
-        &-title {
-            @include fluid-text(20, 28);
-            color: #000;
-            font-weight: 400;
-            margin-bottom: 20px;
-            margin-top: 35px;
-        }
-
-        &-desc {
-            color: var(--color-gray);
-
-            @include tablet {
-                font-size: 14px;
-            }
-        }
     }
 }

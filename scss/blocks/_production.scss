@@ -1,0 +1,67 @@
+.production {
+    padding-block: var(--section-padding-y);
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(345px, 480px));
+
+        @include desktop {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ebebf0;
+            min-height: 593px;
+            transition-duration: var(--transition-duration);
+
+            &:hover {
+                border: 1px solid var(--color-accent);
+            }
+
+            @include laptop {
+                min-height: 500px;
+            }
+
+            @include mobile {
+                min-height: 429px;
+            }
+        }
+
+        &-header {
+            padding: 40px 50px 0;
+            margin-bottom: auto;
+
+            @include laptop {
+                padding: 0px 35px 0;
+            }
+
+            @include mobile {
+                padding: 0 20px;
+            }
+        }
+
+        &-title {
+            color: #292d33;
+        }
+
+        &-desc {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+
+        &-image img {
+            @include desktop {
+                margin-left: auto;
+            }
+        }
+    }
+}

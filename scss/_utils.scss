@@ -45,6 +45,27 @@
     }
 }
 
+.item-title {
+    @include fluid-text(20, 28);
+
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+
+.item-desc {
+    color: var(--color-gray);
+
+    @include tablet {
+        font-size: 14px;
+    }
+
+    @include laptop {
+        font-size: 14px;
+    }
+}
+
 .opened {
     top: 0;
 }

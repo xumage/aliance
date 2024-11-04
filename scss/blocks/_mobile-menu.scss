@@ -9,11 +9,13 @@
     font-size: 14px;
     min-height: 100%;
     display: none;
+    z-index: 2;
 
     &__container {
         padding: 100px 15px 15px 15px;
         background-color: #fff;
         min-height: 100vh;
+        z-index: 100;
     }
 
     &__list {
