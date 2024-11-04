@@ -1,0 +1,47 @@
+.trademarks {
+    padding-block: var(--container-padding-x);
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            width: 50%;
+            padding: 50px;
+            column-gap: 50px;
+            border: 1px solid #ebebf0;
+            display: flex;
+
+            @include desktop {
+                width: 100%;
+            }
+
+            @include laptop {
+                padding: 25px;
+                column-gap: 25px;
+            }
+
+            @include mobile {
+                padding: 15px;
+                flex-direction: column;
+                row-gap: 25px;
+            }
+        }
+
+        &-title {
+            margin-top: 0;
+        }
+
+        &-img {
+            max-width: 140px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+
+            @include tablet {
+                max-width: 100px;
+            }
+        }
+    }
+}

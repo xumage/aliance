@@ -52,6 +52,10 @@
     font-weight: 400;
     margin-bottom: 20px;
     margin-top: 35px;
+
+    &:hover {
+        color: var(--color-accent);
+    }
 }
 
 .item-desc {
