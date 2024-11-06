@@ -1,0 +1,48 @@
+.about {
+    padding-block: var(--section-padding-y);
+    max-width: 1920px;
+    padding-right: var(--container-padding-x);
+
+    @include desktop {
+        padding-right: 0;
+    }
+
+    &__inner {
+        display: flex;
+        column-gap: 120px;
+        align-items: center;
+
+        @include desktop {
+            column-gap: 60px;
+            flex-direction: column;
+            row-gap: 70px;
+        }
+    }
+
+    &__image img {
+        @include desktop {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        @include desktop {
+            padding-inline: var(--container-padding-x);
+        }
+    }
+
+    &__desc {
+        p {
+            margin-bottom: 10px;
+            max-width: 720px;
+        }
+    }
+
+    &__link {
+        color: var(--color-accent) !important;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+    }
+}

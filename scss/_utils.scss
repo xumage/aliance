@@ -58,6 +58,30 @@
     }
 }
 
+.blue {
+    font-weight: 600;
+    color: var(--color-accent);
+    padding-left: 60px;
+    position: relative;
+    font-size: 16px;
+    margin-top: 15px;
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+        padding-left: 70px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background-color: var(--color-accent);
+        top: 8px;
+        left: 0;
+    }
+}
+
 .item-desc {
     color: var(--color-gray);
 
