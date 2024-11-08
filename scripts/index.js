@@ -21,9 +21,22 @@ new Swiper(".swiper", {
         800: { slidesPerView: 4 },
         1024: { slidesPerView: 5 },
     },
-    // 1280: { slidesPerView: 5 },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+});
+
+new Swiper(".blog__swiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    breakpoints: {
+        1: { slidesPerView: 1 },
+        1024: { slidesPerView: 2 },
+    },
+    navigation: {
+        nextEl: ".blog__swiper-button-next",
+        prevEl: ".blog__swiper-button-prev",
     },
 });

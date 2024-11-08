@@ -99,6 +99,7 @@ address {
   --container-width: 1440px;
   --container-padding-x: 15px;
   --transition-duration: 0.3s;
+  --bgImgUrl: "";
 }
 
 .container {
@@ -880,4 +881,102 @@ h2 {
 }
 .about .section-title {
   margin-bottom: 25px;
+}
+
+.categories {
+  padding-block: var(--section-padding-y);
+}
+.categories__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.categories__icons {
+  display: flex;
+  flex-direction: column;
+}
+.categories__icons-list {
+  display: flex;
+  flex-direction: column;
+}
+.categories__icons-list-item {
+  color: #000;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+
+.blog {
+  padding-block: var(--section-padding-y);
+}
+.blog__swiper-slide {
+  padding: 50px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 480px) {
+  .blog__swiper-slide {
+    padding: 25px;
+  }
+}
+.blog__swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.blog__swiper-slide-text {
+  margin-top: auto;
+  z-index: 1;
+}
+.blog__swiper-slide-title, .blog__swiper-slide-desc {
+  color: #fff;
+}
+.blog__swiper-slide-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.blog__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.blog__link:hover {
+  color: var(--color-accent-dark) !important;
+  transition-duration: var(--transition-duration);
+}
+.blog__link:visited {
+  color: var(--color-accent);
+}
+.blog__swiper-buttons {
+  position: relative;
+  max-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.blog__swiper-button-prev, .blog__swiper-button-next {
+  margin-block: 10px;
+  position: static;
+  background-color: var(--color-accent);
+  padding: 15px;
+  display: flex;
+  flex: 1;
+  transition-duration: var(--transition-duration);
+}
+.blog__swiper-button-prev:hover, .blog__swiper-button-next:hover {
+  background-color: var(--color-accent-dark);
+}
+.blog__swiper-button-prev::after, .blog__swiper-button-next::after {
+  content: "";
 }/*# sourceMappingURL=styles.css.map */
