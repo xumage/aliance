@@ -1,0 +1,136 @@
+.feedback {
+    background-color: #f0f2f5;
+    padding-block: var(--section-padding-y);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+
+        &::after {
+            content: "";
+            display: none;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: -85px;
+        left: -15%;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__main {
+        max-width: 720px;
+        margin-left: auto;
+        text-align: start;
+
+        @include desktop {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 40px;
+        max-width: 600px;
+
+        @include tablet {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__fields {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        margin-bottom: 30px;
+        row-gap: 20px;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        &-group {
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    .feedback__fields-group {
+        position: relative;
+    }
+
+    .feedback__input {
+        width: 100%;
+        padding: 20px 18px;
+        border: 1px solid #e4e4eb;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .feedback__label {
+        position: absolute;
+        left: 18px;
+        top: 20px;
+        color: #828a99;
+        transition-duration: var(--transition-duration);
+        pointer-events: none; /* Чтобы метка не мешала вводу текста */
+    }
+
+    .feedback__input:focus + .feedback__label,
+    .feedback__input:not(:placeholder-shown) + .feedback__label {
+        top: -11px;
+        font-size: 12px;
+        color: var(--color-accent);
+        background-color: #f0f2f5;
+        color: #828a99;
+        padding: 5px;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: 20px;
+            column-gap: 0;
+        }
+    }
+
+    &__disclaimer {
+        color: var(--color-gray);
+        font-size: 12px;
+        display: flex;
+        align-items: start;
+
+        p {
+            margin-left: 10px;
+        }
+
+        svg {
+            flex-shrink: 0;
+        }
+    }
+
+    &__button {
+        padding: 20px 50px;
+        flex-shrink: 0;
+        margin-right: 30px;
+
+        @include tablet {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}

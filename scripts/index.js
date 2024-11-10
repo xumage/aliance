@@ -12,6 +12,12 @@ for (let i = 0; i < dropDowns.length; i++) {
     });
 }
 
+const element = document.getElementById("feedbackPhone");
+const maskOptions = {
+    mask: "+{7}(000)000-00-00",
+};
+const mask = IMask(element, maskOptions);
+
 new Swiper(".swiper", {
     slidesPerView: 4,
     breakpoints: {
