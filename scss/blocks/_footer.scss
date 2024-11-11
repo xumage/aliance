@@ -1,0 +1,148 @@
+.footer {
+    font-size: 16px;
+
+    &__top {
+        border-bottom: 1px solid #ebebf0;
+        width: 100%;
+
+        &-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-block: 50px;
+            overflow: hidden;
+            flex-wrap: wrap;
+
+            @include laptop {
+                row-gap: 30px;
+            }
+        }
+
+        &-logo {
+            margin-right: 36px;
+
+            @include desktop {
+                max-width: 160px;
+            }
+            @include mobile {
+                margin-bottom: 10px;
+            }
+        }
+
+        &-tel {
+            font-size: 32px;
+            margin: 0 82px 0 auto;
+
+            @include desktop {
+                margin-right: 40px;
+                font-size: 25px;
+            }
+
+            @include mobile {
+                margin-left: 0;
+            }
+        }
+
+        &-address {
+            margin-right: 36px;
+
+            @include desktop {
+                margin-right: 18px;
+                font-size: 14px;
+            }
+        }
+
+        &-soc1al-links {
+            @include laptop {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    &__middle {
+        border-bottom: 1px solid #ebebf0;
+
+        &-container {
+            display: flex;
+            column-gap: 130px;
+            padding-block: 50px;
+
+            @include desktop {
+                column-gap: 65px;
+            }
+
+            @include laptop {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 1.87em;
+                font-size: 14px;
+            }
+
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 30%;
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-list-column {
+            color: #000;
+        }
+
+        &-list {
+            padding-left: 25px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            &-title {
+                margin-bottom: 30px;
+
+                @include mobile {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &-item {
+                color: var(--color-gray);
+            }
+        }
+    }
+
+    &__bottom {
+        &-container {
+            display: flex;
+            align-items: center;
+            color: var(--color-gray);
+            padding-block: 20px;
+
+            @include laptop {
+                font-size: 14px;
+                flex-direction: column;
+                align-items: stretch;
+                row-gap: 10px;
+            }
+        }
+
+        &-privacy {
+            margin-left: 50px;
+            text-decoration: underline;
+
+            @include laptop {
+                margin-left: 0;
+            }
+        }
+
+        &-ruso {
+            margin-left: auto;
+
+            @include laptop {
+                margin-left: 0;
+            }
+        }
+    }
+}

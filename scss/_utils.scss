@@ -23,6 +23,21 @@
     min-height: 100%;
 }
 
+.tel {
+    font-weight: 600;
+    text-decoration: underline;
+    display: block;
+    z-index: 1;
+    color: #000;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: #000;
+}
+
 .section-title {
     @include fluid-text(36, 60);
 

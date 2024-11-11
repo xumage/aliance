@@ -3,22 +3,72 @@
 
     &__inner {
         display: flex;
-        justify-content: space-between;
+
+        @include desktop-s {
+            flex-direction: column;
+            row-gap: 30px;
+        }
     }
 
     &__icons {
         display: flex;
         flex-direction: column;
+        flex: 1;
 
         &-list {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+
+            @include laptop {
+                font-size: 14px;
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+
+            &-item {
+                color: #000;
+                display: flex;
+                align-items: center;
+                column-gap: 20px;
+            }
         }
-        &-list-item {
-            color: #000;
+    }
+
+    &__marks {
+        flex: 0 0 auto;
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            flex-shrink: 0;
+
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        &-image {
+            @include desktop {
+                max-width: 50px !important;
+            }
+        }
+
+        &-item {
+            padding: 45px 85px;
+            border: 1px solid #ebebf0;
+
+            @include tablet {
+                padding: 30px 30px;
+            }
+        }
+        &-link {
             display: flex;
             align-items: center;
-            column-gap: 25px;
+            text-align: center;
+            justify-content: center;
         }
     }
 }
