@@ -238,8 +238,14 @@ body {
   background-color: var(--background-color);
 }
 
-.body.no-scroll {
+.body.opened {
   overflow: hidden;
+}
+
+@media (max-width: 1280px) {
+  section[class] {
+    padding-block: 50px;
+  }
 }
 
 a,
@@ -264,6 +270,8 @@ h2 {
   left: 0;
   right: 0;
   border-bottom: 1px solid #fff;
+  transition-duration: var(--transition-duration);
+  z-index: 100;
 }
 .header.opened .mobile-menu {
   display: block;
@@ -281,6 +289,25 @@ h2 {
   rotate: -45deg;
   top: 32px;
   background-color: #000;
+}
+.header.scrolled {
+  background-color: #fafbfc;
+  box-shadow: 0px 4px 13px -1px rgba(34, 60, 80, 0.26);
+}
+.header.scrolled .menu-list {
+  color: #000;
+}
+.header.scrolled .user-actions__link {
+  color: #000;
+}
+.header.scrolled .burger-button {
+  border-color: #ebebf0;
+}
+.header.scrolled .burger-button span {
+  background-color: #000;
+}
+.header.scrolled .menu-list__link span::after {
+  border-color: #000;
 }
 .header__container {
   border-bottom: 1px solid #fff;
@@ -353,9 +380,32 @@ h2 {
 .menu-list__item:hover .dropdown {
   display: block;
 }
+.menu-list__item:hover .menu-list__link span::after {
+  transform: rotate(225deg);
+}
 .menu-list__link {
   padding-block: 33px;
   white-space: nowrap;
+}
+.menu-list__link span {
+  position: relative;
+}
+.menu-list__link span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  transform: rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 0 1px 1px 0;
+  transition-duration: var(--transition-duration);
+}
+.menu-list__link span::after span:hover::after {
+  content: "";
+  transform: rotate(90deg);
 }
 
 .dropdown {
@@ -371,12 +421,12 @@ h2 {
 .dropdown__item {
   display: flex;
   margin-bottom: 15px;
-  position: relative;
 }
 .dropdown__item:last-child {
   margin-bottom: 0;
 }
 .dropdown__link {
+  position: relative;
   white-space: nowrap;
 }
 .dropdown__link::after {
@@ -414,6 +464,7 @@ h2 {
        column-gap: 14px;
   color: #fff;
   white-space: nowrap;
+  background-color: transparent;
 }
 @media (max-width: 1666px) {
   .user-actions__link {
@@ -467,7 +518,7 @@ h2 {
   position: relative;
   border-right: 1px solid var(--background-color);
   display: none;
-  z-index: 3;
+  z-index: 101;
 }
 @media (max-width: 1280px) {
   .burger-button {
@@ -953,17 +1004,15 @@ h2 {
 .categories__marks-item {
   padding: 45px 85px;
   border: 1px solid #ebebf0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 @media (max-width: 769px) {
   .categories__marks-item {
     padding: 30px 30px;
   }
-}
-.categories__marks-link {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
 }
 
 .blog {

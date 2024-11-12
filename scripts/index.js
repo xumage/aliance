@@ -1,9 +1,23 @@
+// burger button
+
 const burgerButton = document.getElementById("burgerButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
 burgerButton.addEventListener("click", function () {
     header.classList.toggle("opened");
 });
+
+// блокировка скролла при открытом моб меню
+
+burgerButton.addEventListener("click", function () {
+    body.classList.toggle("opened");
+});
+
+// блокировка скролла при открытом моб меню
+
+// burger button
+
+// выадающее меню при наведении
 
 const dropDowns = document.getElementsByClassName("dropdownSelected");
 for (let i = 0; i < dropDowns.length; i++) {
@@ -12,11 +26,33 @@ for (let i = 0; i < dropDowns.length; i++) {
     });
 }
 
+// смена цвета шапки при скролле
+
+document.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 0) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+// смена цвета шапки при скролле
+
+// выадающее меню при наведении
+
+// imask
+
 const element = document.getElementById("feedbackPhone");
 const maskOptions = {
     mask: "+{7}(000)000-00-00",
 };
 const mask = IMask(element, maskOptions);
+
+// imask
+
+// слайдер триггер
 
 new Swiper(".swiper", {
     slidesPerView: 4,
@@ -33,6 +69,10 @@ new Swiper(".swiper", {
     },
 });
 
+// слайдер триггер
+
+// слайдер блог
+
 new Swiper(".blog__swiper", {
     slidesPerView: 2,
     spaceBetween: 30,
@@ -46,3 +86,5 @@ new Swiper(".blog__swiper", {
         prevEl: ".blog__swiper-button-prev",
     },
 });
+
+// слайдер блог

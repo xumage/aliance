@@ -4,6 +4,8 @@
     left: 0;
     right: 0;
     border-bottom: 1px solid #fff;
+    transition-duration: var(--transition-duration);
+    z-index: 100;
 
     &.opened .mobile-menu {
         display: block;
@@ -22,6 +24,27 @@
         rotate: -45deg;
         top: 32px;
         background-color: #000;
+    }
+
+    &.scrolled {
+        background-color: #fafbfc;
+        box-shadow: 0px 4px 13px -1px rgba(34, 60, 80, 0.26);
+    }
+
+    &.scrolled .menu-list {
+        color: #000;
+    }
+    &.scrolled .user-actions__link {
+        color: #000;
+    }
+    &.scrolled .burger-button {
+        border-color: #ebebf0;
+    }
+    &.scrolled .burger-button span {
+        background-color: #000;
+    }
+    &.scrolled .menu-list__link span::after {
+        border-color: #000;
     }
 
     &__container {
@@ -91,11 +114,38 @@
             &:hover .dropdown {
                 display: block;
             }
+
+            &:hover .menu-list__link span::after {
+                transform: rotate(225deg);
+            }
         }
 
         &__link {
             padding-block: 33px;
             white-space: nowrap;
+
+            span {
+                position: relative;
+            }
+
+            span::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 5px;
+                transform: rotate(45deg);
+                width: 7px;
+                height: 7px;
+                border-style: solid;
+                border-color: #fff;
+                border-width: 0 1px 1px 0;
+                transition-duration: var(--transition-duration);
+
+                span:hover::after {
+                    content: "";
+                    transform: rotate(90deg);
+                }
+            }
         }
     }
 }
@@ -113,7 +163,6 @@
     &__item {
         display: flex;
         margin-bottom: 15px;
-        position: relative;
     }
 
     &__item:last-child {
@@ -121,6 +170,7 @@
     }
 
     &__link {
+        position: relative;
         white-space: nowrap;
 
         &::after {
@@ -159,6 +209,7 @@
         column-gap: 14px;
         color: #fff;
         white-space: nowrap;
+        background-color: transparent;
 
         @include desktop-s {
             margin-right: 25px;
