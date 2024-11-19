@@ -1,0 +1,46 @@
+.close-button {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    transition-duration: var(--transition-duration);
+    padding: 13px;
+    border: 1px solid #ebebf0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1006;
+
+    &:hover {
+        background-color: #fff;
+        border: 1px solid #000;
+    }
+
+    &:hover + &__line {
+        transform: rotate(190deg);
+    }
+
+    &:hover &__line::after {
+        background-color: #000;
+    }
+
+    &__line {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: #828a99;
+            width: 17px;
+            height: 1px;
+            right: -8px;
+        }
+
+        &:nth-child(1)::after {
+            rotate: 45deg;
+        }
+
+        &:nth-child(2)::after {
+            rotate: -45deg;
+        }
+    }
+}

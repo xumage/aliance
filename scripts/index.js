@@ -1,3 +1,5 @@
+"use strict";
+
 // burger button
 
 const burgerButton = document.getElementById("burgerButton");
@@ -88,3 +90,50 @@ new Swiper(".blog__swiper", {
 });
 
 // слайдер блог
+
+// модальное окно
+
+// Получаем элементы модалки и кнопок
+const modal = document.getElementById("questionModal");
+const openModalButton = document.getElementById("openModal");
+const closeModalButton = document.getElementById("closeDialog");
+
+// Функция для открытия модалки
+function openModal() {
+    modal.setAttribute("open", "");
+}
+
+function closeModal() {
+    modal.removeAttribute("open");
+}
+
+openModalButton.addEventListener("click", openModal);
+closeModalButton.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});
+
+// модальное окно
+
+// затемнение при открытом поп апе
+
+document.getElementById("openModal").addEventListener("click", function () {
+    document.getElementById("backdrop").classList.remove("hidden");
+});
+
+document.getElementById("closeDialog").addEventListener("click", function () {
+    document.getElementById("backdrop").classList.add("hidden");
+});
+
+// затемнение при открытом поп апе
+
+// document.getElementById("openModal").addEventListener("click", function () {
+//     body.classList.add("opened");
+// });
+
+// document.getElementById("closeDialog").addEventListener("click", function () {
+//     body.classList.remove("opened");
+// });

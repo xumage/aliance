@@ -52,7 +52,7 @@
 
         &-image {
             @include desktop {
-                max-width: 50px !important;
+                max-width: 50px;
             }
         }
 
@@ -63,6 +63,15 @@
             align-items: center;
             text-align: center;
             justify-content: center;
+            filter: gray;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+            transition-duration: var(--transition-duration);
+
+            &:hover {
+                -webkit-filter: grayscale(0);
+                filter: none;
+            }
 
             @include tablet {
                 padding: 30px 30px;

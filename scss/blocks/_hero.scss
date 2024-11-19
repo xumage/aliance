@@ -4,14 +4,14 @@
     background-position: center center;
     background-size: cover;
     min-height: 100dvh;
-    padding-block: var(--section-padding-y);
+    padding-top: var(--section-padding-y);
+
+    @include desktop {
+        padding-bottom: 0 !important;
+    }
 
     &__inner {
         padding-top: 85px;
-
-        @include desktop {
-            padding-top: 20px;
-        }
     }
 
     &__title {

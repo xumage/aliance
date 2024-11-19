@@ -11,6 +11,12 @@
             column-gap: 50px;
             border: 1px solid #ebebf0;
             display: flex;
+            filter: grayscale(1);
+            transition-duration: var(--transition-duration);
+
+            &:hover {
+                filter: grayscale(0);
+            }
 
             @include desktop {
                 width: 100%;

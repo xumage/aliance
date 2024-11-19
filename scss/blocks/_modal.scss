@@ -1,0 +1,63 @@
+dialog {
+    border: none;
+    z-index: 1000;
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.modal {
+    max-width: 460px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 50px;
+    width: 100%;
+
+    .section-title {
+        @include fluid-text(40, 48);
+
+        margin-bottom: 20px;
+    }
+
+    .section-title::after {
+        display: none;
+    }
+
+    &__feedback-container {
+        position: relative;
+    }
+
+    .feedback {
+        &__fields {
+            flex-direction: column;
+        }
+
+        &__footer {
+            flex-direction: column;
+        }
+
+        &__button {
+            margin: 0;
+            width: 100%;
+        }
+
+        &__disclaimer {
+            margin-top: 24px;
+        }
+
+        &__label {
+            background-color: #fff !important;
+        }
+    }
+
+    &__feedback-text {
+        margin-bottom: 30px;
+    }
+}

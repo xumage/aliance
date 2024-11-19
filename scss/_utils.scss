@@ -30,7 +30,6 @@
     z-index: 1;
     color: #000;
 }
-
 .address {
     display: flex;
     align-items: center;
@@ -43,7 +42,7 @@
 
     text-transform: uppercase;
     color: #000;
-    font-family: var(--font-family-alt);
+    font-family: var(--font-family-alt) !important;
     margin-bottom: 50px;
     position: relative;
     font-weight: 400;
@@ -108,9 +107,12 @@
     }
 }
 
-.opened {
-    top: 0;
-}
+// .opened {
+//     // top: 0;
+//     // position: fixed;
+//     // width: 100%;
+//     // overflow: hidden;
+// }
 
 .mobile-hidden {
     @include mobile;
