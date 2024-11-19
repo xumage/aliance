@@ -5,10 +5,33 @@ body {
     line-height: 1.28;
     color: #fff;
     background-color: var(--background-color);
-}
 
-.body.opened {
-    overflow: hidden;
+    &.no-scroll {
+        overflow: hidden;
+    }
+
+    &.opened {
+        overflow: hidden;
+    }
+
+    &.opened .mobile-menu {
+        display: block;
+    }
+
+    &.opened .burger-button span:nth-child(1) {
+        rotate: 45deg;
+        bottom: 35px;
+        background-color: #000;
+    }
+    &.opened .burger-button span:nth-child(2) {
+        opacity: 0;
+        background-color: #000;
+    }
+    &.opened .burger-button span:nth-child(3) {
+        rotate: -45deg;
+        top: 32px;
+        background-color: #000;
+    }
 }
 
 section[class] {

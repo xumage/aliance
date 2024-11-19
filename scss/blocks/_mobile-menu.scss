@@ -11,6 +11,10 @@
     display: none;
     z-index: 2;
 
+    &.opened {
+        display: block;
+    }
+
     &__container {
         padding: 100px 15px 15px 15px;
         background-color: #fff;
