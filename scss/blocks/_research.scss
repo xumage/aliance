@@ -1,0 +1,26 @@
+.research {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    &__desc {
+        width: 49%;
+    }
+
+    &__swiper-slide-image {
+        min-height: 400px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    // &--about {
+    //     overflow: initial;
+    // }
+}
+
+.blog__swiper-slide {
+    max-width: 705px;
+    width: 100%;
+}

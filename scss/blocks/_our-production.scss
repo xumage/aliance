@@ -1,0 +1,17 @@
+.our-production {
+    padding-block: var(--section-padding-y);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__one {
+        max-width: 720px;
+    }
+
+    &__desc {
+        margin-bottom: 30px;
+    }
+}

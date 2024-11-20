@@ -15,10 +15,21 @@ dialog {
     max-width: 460px;
     position: fixed;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px 50px;
+    margin: 0 auto;
+    // left: 50%;
+    transform: translate(0, -50%);
     width: 100%;
+    margin: auto;
+    max-height: 90%;
+    overflow: auto;
+
+    @include mobile {
+        width: 90%;
+    }
+
+    &__feedback-container {
+        padding: 40px 50px;
+    }
 
     .section-title {
         @include fluid-text(40, 48);
@@ -41,6 +52,7 @@ dialog {
 
         &__footer {
             flex-direction: column;
+            row-gap: 0;
         }
 
         &__button {
@@ -59,5 +71,20 @@ dialog {
 
     &__feedback-text {
         margin-bottom: 30px;
+    }
+
+    .tanksMessage {
+        &__image {
+            margin-bottom: 30px;
+        }
+
+        &__button {
+            width: 100%;
+            color: #fff;
+            padding-block: 20px;
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+        }
     }
 }

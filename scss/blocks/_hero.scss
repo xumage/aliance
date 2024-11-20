@@ -1,5 +1,5 @@
 .hero {
-    background-image: url(../../images/hero/hero-bg.jpg);
+    background-image: url(../images/hero/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -92,6 +92,9 @@
     &__button {
         padding: 25px 60px;
         margin-bottom: 100px;
+        display: inline-flex;
+        // text-align: center;
+        justify-content: center;
 
         @include desktop {
             margin-bottom: 40px;

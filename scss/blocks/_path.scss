@@ -1,0 +1,39 @@
+.path {
+    padding-block: var(--section-padding-y);
+    margin-top: 83px;
+    background-color: #f0f2f5;
+
+    @include desktop-s {
+        margin-top: 69px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        color: #000;
+
+        a:first-child {
+            color: var(--color-gray);
+            display: flex;
+            align-items: center;
+            transition-duration: var(--transition-duration);
+
+            &:hover {
+                color: #000;
+            }
+        }
+
+        a:first-child::after {
+            content: "";
+            width: 14px;
+            height: 1px;
+            background-color: var(--color-gray);
+            margin-inline: 10px;
+            display: block;
+        }
+    }
+}
