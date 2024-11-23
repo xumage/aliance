@@ -941,14 +941,17 @@ h2 {
 }
 .about__inner {
   display: flex;
-  column-gap: 120px;
-  align-items: center;
+  column-gap: 7.5rem;
 }
 @media (max-width: 1280px) {
   .about__inner {
     column-gap: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  .about__inner {
     flex-direction: column;
-    row-gap: 70px;
+    row-gap: 80px;
   }
 }
 @media (max-width: 1280px) {
@@ -964,6 +967,11 @@ h2 {
 .about__desc p {
   margin-bottom: 10px;
   max-width: 720px;
+}
+@media (max-width: 1024px) {
+  .about__desc p {
+    max-width: 100%;
+  }
 }
 .about__link {
   color: var(--color-accent) !important;

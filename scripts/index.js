@@ -197,7 +197,7 @@ if (typeof IMask !== "undefined") {
 
 // Проверка наличия библиотеки Swiper
 if (typeof Swiper !== "undefined") {
-    new Swiper(".hero__swiper", {
+    new Swiper(".triggers__swiper", {
         slidesPerView: 4,
         breakpoints: {
             1: { slidesPerView: 1 },
