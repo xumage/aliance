@@ -93,8 +93,8 @@
         padding: 25px 60px;
         margin-bottom: 100px;
         display: inline-flex;
-        // text-align: center;
         justify-content: center;
+        max-width: 313px;
 
         @include desktop {
             margin-bottom: 40px;

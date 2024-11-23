@@ -109,6 +109,10 @@
 
             &-item {
                 color: var(--color-gray);
+
+                &:hover {
+                    color: var(--color-accent);
+                }
             }
         }
     }

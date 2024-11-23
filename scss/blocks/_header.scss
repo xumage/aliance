@@ -87,6 +87,10 @@
         column-gap: 50px;
         color: #fff;
 
+        &--about {
+            color: #000;
+        }
+
         @include desktop-s {
             column-gap: 25px;
         }

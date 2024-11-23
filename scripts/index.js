@@ -197,7 +197,7 @@ if (typeof IMask !== "undefined") {
 
 // Проверка наличия библиотеки Swiper
 if (typeof Swiper !== "undefined") {
-    new Swiper(".swiper", {
+    new Swiper(".hero__swiper", {
         slidesPerView: 4,
         breakpoints: {
             1: { slidesPerView: 1 },
@@ -228,7 +228,8 @@ if (typeof Swiper !== "undefined") {
 
     new Swiper(".research__swiper", {
         spaceBetween: 30,
-        slidesPerView: "auto",
+        slidesPerView: 2,
+        centeredSlides: true,
         loop: true,
         breakpoints: {
             1: { slidesPerView: 1 },
