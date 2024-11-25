@@ -21,24 +21,22 @@ if (header) {
 }
 
 // Затемнение при открытом поп апе
-const burgerButton = document.getElementById("burgerButton");
-const mobileMenu = document.getElementById("mobileMenu");
+const burgerButton = document.querySelector(".burger-button");
+const mobileMenu = document.querySelector(".mobile-menu");
 const body = document.body;
 
-const modal = document.getElementById("questionModal");
-const openModalButton = document.getElementById("openModal");
-const closeModalButton = document.getElementById("closeDialog");
-const backdrop = document.getElementById("backdrop");
+// if (burgerButton) {
+//     burgerButton.addEventListener("click", function () {
+//         if (modal && !modal.hasAttribute("open")) {
+//             body.classList.toggle("opened");
+//         }
+//     });
+// }
 
-if (burgerButton) {
-    burgerButton.addEventListener("click", function () {
-        if (modal && !modal.hasAttribute("open")) {
-            body.classList.toggle("opened");
-        }
-    });
-}
+burgerButton.addEventListener("click", function () {
+    body.classList.toggle("opened");
+});
 
-// Проверка наличия библиотеки IMask
 if (typeof IMask !== "undefined") {
     document.querySelectorAll(".phone-mask").forEach((e) => {
         IMask(e, { mask: "+{7}(000)000-00-00" });

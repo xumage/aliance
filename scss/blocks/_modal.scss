@@ -5,10 +5,6 @@ dialog {
     &:focus-visible {
         outline: none;
     }
-
-    &::backdrop {
-        background: rgba(0, 0, 0, 0.7);
-    }
 }
 
 .modal {
@@ -19,9 +15,13 @@ dialog {
     // left: 50%;
     transform: translate(0, -50%);
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     max-height: 90%;
     overflow: auto;
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.7);
+    }
 
     @include mobile {
         width: 90%;
@@ -73,7 +73,7 @@ dialog {
         margin-bottom: 30px;
     }
 
-    .tanksMessage {
+    .thanksMessage {
         &__image {
             margin-bottom: 30px;
         }
