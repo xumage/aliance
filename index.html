@@ -83,7 +83,7 @@
                             <path d="M15.9688 12.0822L15.2188 15.2384C15.125 15.7072 14.75 16.0197 14.2812 16.0197C6.40625 15.9884 0 9.58218 0 1.70718C0 1.23843 0.28125 0.86343 0.75 0.76968L3.90625 0.0196803C4.34375 -0.0740697 4.8125 0.17593 5 0.58218L6.46875 3.98843C6.625 4.39468 6.53125 4.86343 6.1875 5.11343L4.5 6.48843C5.5625 8.64468 7.3125 10.3947 9.5 11.4572L10.875 9.76968C11.125 9.45718 11.5938 9.33218 12 9.48843L15.4062 10.9572C15.8125 11.1759 16.0625 11.6447 15.9688 12.0822Z" fill="#fff" />
                         </svg>
                     </a>
-                    <button type="button" class="user-actions__button">Получить консультацию</button>
+                    <button type="button" onclick="questionModal.showModal()" class="user-actions__button">Получить консультацию</button>
                 </div>
             </div>
 
@@ -91,10 +91,10 @@
                 <div class="mobile-menu__container">
                     <ul class="mobile-menu__list">
                         <li class="mobile-menu__item">
-                            <a href="#" class="mobile-menu__link">О компании</a>
+                            <a href="#" class="mobile-menu__link">О компании </a>
                         </li>
                         <li class="mobile-menu__item dropdownSelected">
-                            <a href="#" class="mobile-menu__link">Контрактное производство</a>
+                            <a href="#" class="mobile-menu__link">Контрактное производство <span class="arrow"></span></a>
                             <ul class="mobile-menu__dropdown">
                                 <li class="mobile-menu__dropitem">
                                     <a href="" class="mobile-menu__droplink">Автомобильная химия</a>
@@ -268,7 +268,7 @@
                             <div class="shema__list-desc item-desc">
                                 <p>Безусловно, сплочённость команды профессионалов позволяет оценить значение форм воздействия.</p>
                             </div>
-                            <button class="shema__list-button blue" type="button" id="openModal">Оставить заявку</button>
+                            <button class="shema__list-button blue" type="button" onclick="questionModal.showModal()">Оставить заявку</button>
                         </li>
                         <li class="shema__list-item">
                             <span class="shema__list-counter">02</span>
@@ -860,15 +860,15 @@
         <div class="backdrop hidden" id="backdrop"></div>
         <dialog class="modal modal__feedback" aria-labelledby="Есть вопросы?" id="questionModal">
             <div class="modal__feedback-container">
-                <button class="close-button" id="closeDialog" type="submit">
-                    <span class="close-button__line"></span>
-                    <span class="close-button__line"></span>
-                </button>
                 <h3 class="section-title">Есть вопросы?</h3>
                 <div class="modal__feedback-text">
                     <p>Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
                 </div>
                 <form class="feedback__form" method="dialog" id="applicationForm">
+                    <button class="close-button" id="closeDialog" onclick="questionModal.close()" type="button">
+                        <span class="close-button__line"></span>
+                        <span class="close-button__line"></span>
+                    </button>
                     <div class="feedback__fields">
                         <div class="feedback__fields-group">
                             <input class="feedback__input" type="text" id="feedbackName" name="feedbackName" placeholder=" " />

@@ -4,10 +4,12 @@
     &__top {
         display: flex;
         align-items: center;
+        margin-bottom: 100px;
+        row-gap: 50px;
 
         @include desktop {
             flex-direction: column;
-            row-gap: 72px;
+            margin-bottom: 25px;
         }
     }
 

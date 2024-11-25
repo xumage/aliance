@@ -28,6 +28,10 @@
         border-color: #000;
     }
 
+    &--about {
+        background-color: #fff;
+    }
+
     &__container {
         border-bottom: 1px solid #fff;
     }
@@ -109,25 +113,6 @@
             padding-block: 33px;
             white-space: nowrap;
             position: relative;
-
-            // span::after {
-            //     content: "";
-            //     position: absolute;
-            //     top: 2px;
-            //     left: 5px;
-            //     transform: rotate(45deg);
-            //     width: 7px;
-            //     height: 7px;
-            //     border-style: solid;
-            //     border-color: #fff;
-            //     border-width: 0 1px 1px 0;
-            //     transition-duration: var(--transition-duration);
-
-            //     span:hover::after {
-            //         content: "";
-            //         transform: rotate(90deg);
-            //     }
-            // }
         }
     }
 }

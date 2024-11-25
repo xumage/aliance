@@ -35,6 +35,15 @@
         padding-block: 5px;
     }
 
+    &__link {
+        position: relative;
+    }
+
+    &__link .arrow {
+        right: -12px;
+        border-color: #000;
+    }
+
     &__dropdown {
         flex-direction: column;
         padding: 20px;

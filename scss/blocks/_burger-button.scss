@@ -10,15 +10,19 @@
     @include desktop {
         display: block;
     }
-}
 
-.burger-button span {
-    position: absolute;
-    left: 30px;
-    width: 20px;
-    height: 2px;
-    background-color: #fff;
-    transition-duration: var(--transition-duration);
+    & span {
+        position: absolute;
+        left: 30px;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        transition-duration: var(--transition-duration);
+    }
+
+    &--about & span {
+        background-color: #000;
+    }
 }
 
 .burger-button span:nth-child(1) {
