@@ -35,6 +35,20 @@ body {
     }
 }
 
+.wrapper--main {
+    .header {
+        background-color: transparent;
+    }
+
+    .burger-button__line {
+        background-color: #fff;
+    }
+
+    .menu-list {
+        color: #fff;
+    }
+}
+
 section[class] {
     @include desktop {
         padding-block: 50px;

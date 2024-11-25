@@ -3,7 +3,7 @@
     height: 69px;
     background-color: transparent;
     position: relative;
-    border-right: 1px solid var(--background-color);
+    border-right: 1px solid var(--color-gray-light);
     display: none;
     z-index: 101;
 
@@ -11,17 +11,13 @@
         display: block;
     }
 
-    & span {
+    &__line {
         position: absolute;
         left: 30px;
         width: 20px;
         height: 2px;
-        background-color: #fff;
-        transition-duration: var(--transition-duration);
-    }
-
-    &--about & span {
         background-color: #000;
+        transition-duration: var(--transition-duration);
     }
 }
 

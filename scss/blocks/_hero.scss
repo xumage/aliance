@@ -61,13 +61,13 @@
         width: 100%;
         transition-duration: var(--transition-duration);
         position: relative;
-        border-bottom: 1px solid #ebebf033;
+        border-bottom: 1px solid var(--color-gray-light);
 
         &:nth-child(1) {
-            border-left: 1px solid #ebebf033;
+            border-left: 1px solid var(--color-gray-light);
         }
         &:nth-child(2) {
-            border-right: 1px solid #ebebf033;
+            border-right: 1px solid var(--color-gray-light);
         }
 
         &:hover {
@@ -116,7 +116,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 24px;
-        border: 1px solid #ebebf033;
+        border: 1px solid var(--color-gray-light);
         flex-shrink: 0;
         height: auto;
 

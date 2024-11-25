@@ -96,6 +96,7 @@ address {
   --color-accent-dark: #3a71d1;
   --color-gray: #828a99;
   --color-gray-dark: #292d33;
+  --color-gray-light: #ebebf0;
   --background-color: #fff;
   --font-family-base: "Noto-sans", sans-serif;
   --font-family-alt: "Bebas", sans-serif;
@@ -260,6 +261,16 @@ body.opened .burger-button span:nth-child(3) {
   background-color: #000;
 }
 
+.wrapper--main .header {
+  background-color: transparent;
+}
+.wrapper--main .burger-button__line {
+  background-color: #fff;
+}
+.wrapper--main .menu-list {
+  color: #fff;
+}
+
 @media (max-width: 1280px) {
   section[class] {
     padding-block: 50px;
@@ -297,6 +308,7 @@ h2 {
   border-bottom: 1px solid #fff;
   transition-duration: var(--transition-duration);
   z-index: 100;
+  background-color: #fff;
 }
 .header.scrolled {
   background-color: #fafbfc;
@@ -309,16 +321,13 @@ h2 {
   color: #000;
 }
 .header.scrolled .burger-button {
-  border-color: #ebebf0;
+  border-color: var(--color-gray-light);
 }
 .header.scrolled .burger-button span {
   background-color: #000;
 }
 .header.scrolled .arrow {
   border-color: #000;
-}
-.header--about {
-  background-color: #fff;
 }
 .header__container {
   border-bottom: 1px solid #fff;
@@ -379,9 +388,6 @@ h2 {
   display: flex;
   align-items: center;
   column-gap: 50px;
-  color: #fff;
-}
-.menu-list--about {
   color: #000;
 }
 @media (max-width: 1666px) {
@@ -507,7 +513,7 @@ h2 {
   height: 69px;
   background-color: transparent;
   position: relative;
-  border-right: 1px solid var(--background-color);
+  border-right: 1px solid var(--color-gray-light);
   display: none;
   z-index: 101;
 }
@@ -516,16 +522,13 @@ h2 {
     display: block;
   }
 }
-.burger-button span {
+.burger-button__line {
   position: absolute;
   left: 30px;
   width: 20px;
   height: 2px;
-  background-color: #fff;
-  transition-duration: var(--transition-duration);
-}
-.burger-button--about .burger-button span {
   background-color: #000;
+  transition-duration: var(--transition-duration);
 }
 
 .burger-button span:nth-child(1) {
@@ -717,13 +720,13 @@ h2 {
   width: 100%;
   transition-duration: var(--transition-duration);
   position: relative;
-  border-bottom: 1px solid rgba(235, 235, 240, 0.2);
+  border-bottom: 1px solid var(--color-gray-light);
 }
 .hero__swiper-button-custom:nth-child(1) {
-  border-left: 1px solid rgba(235, 235, 240, 0.2);
+  border-left: 1px solid var(--color-gray-light);
 }
 .hero__swiper-button-custom:nth-child(2) {
-  border-right: 1px solid rgba(235, 235, 240, 0.2);
+  border-right: 1px solid var(--color-gray-light);
 }
 .hero__swiper-button-custom:hover {
   background-color: var(--color-accent);
@@ -768,7 +771,7 @@ h2 {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  border: 1px solid rgba(235, 235, 240, 0.2);
+  border: 1px solid var(--color-gray-light);
   flex-shrink: 0;
   height: auto;
 }
@@ -838,7 +841,7 @@ h2 {
 .production__list-item {
   display: flex;
   flex-direction: column;
-  border: 1px solid #ebebf0;
+  border: 1px solid var(--color-gray-light);
   min-height: 593px;
   transition-duration: var(--transition-duration);
 }
@@ -899,7 +902,7 @@ h2 {
   width: 50%;
   padding: 50px;
   column-gap: 50px;
-  border: 1px solid #ebebf0;
+  border: 1px solid var(--color-gray-light);
   display: flex;
   filter: grayscale(1);
   transition-duration: var(--transition-duration);
@@ -1050,7 +1053,7 @@ h2 {
 }
 .categories__marks-item {
   padding: 45px 85px;
-  border: 1px solid #ebebf0;
+  border: 1px solid var(--color-gray-light);
   display: flex;
   align-items: center;
   text-align: center;
@@ -1276,7 +1279,7 @@ h2 {
   font-size: 16px;
 }
 .footer__top {
-  border-bottom: 1px solid #ebebf0;
+  border-bottom: 1px solid var(--color-gray-light);
   width: 100%;
 }
 .footer__top-container {
@@ -1336,7 +1339,7 @@ h2 {
   }
 }
 .footer__middle {
-  border-bottom: 1px solid #ebebf0;
+  border-bottom: 1px solid var(--color-gray-light);
 }
 .footer__middle-container {
   display: flex;
@@ -1500,7 +1503,7 @@ dialog::backdrop {
   background-color: transparent;
   transition-duration: var(--transition-duration);
   padding: 13px;
-  border: 1px solid #ebebf0;
+  border: 1px solid var(--color-gray-light);
   position: absolute;
   top: 0;
   right: 0;
