@@ -10,12 +10,20 @@ if (dropDowns.length > 0) {
 
 // Смена цвета шапки при скролле
 const header = document.querySelector("header");
+const logoPaths = document.querySelectorAll(".logo-color-path"); // Используем класс
+
 if (header) {
     document.addEventListener("scroll", () => {
         if (window.scrollY > 0) {
             header.classList.add("scrolled");
+            logoPaths.forEach((path) => {
+                path.setAttribute("fill", "#292D33"); // Меняем цвет при прокрутке
+            });
         } else {
             header.classList.remove("scrolled");
+            logoPaths.forEach((path) => {
+                path.setAttribute("fill", "#fff"); // Возвращаем исходный цвет
+            });
         }
     });
 }

@@ -9,7 +9,16 @@
         position: relative;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100%;
+        transition: background-size 0.3s ease;
+
+        &:hover {
+            background-size: 110%;
+        }
+
+        &:hover &-title {
+            color: var(--color-accent);
+        }
 
         @include mobile {
             padding: 25px;
@@ -31,6 +40,12 @@
             color: #fff;
         }
 
+        &-link::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+        }
+
         &-desc {
             @include text-overflow($lines: 2);
         }
@@ -38,7 +53,6 @@
 
     &__footer {
         display: flex;
-        // justify-content: space-between;
         align-items: center;
         margin-top: 50px;
 
@@ -75,6 +89,7 @@
         display: flex;
         flex: 1;
         transition-duration: var(--transition-duration);
+        user-select: none;
 
         &:hover {
             background-color: var(--color-accent-dark);

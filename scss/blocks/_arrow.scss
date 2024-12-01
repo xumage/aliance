@@ -7,12 +7,16 @@
     width: 7px;
     height: 7px;
     border-style: solid;
-    border-color: #fff;
+    border-color: #000;
     border-width: 0 1px 1px 0;
     transition-duration: var(--transition-duration);
 
     &:hover::after {
         content: "";
         transform: rotate(90deg);
+    }
+
+    &--main {
+        border-color: #fff;
     }
 }

@@ -67,6 +67,7 @@
             -webkit-filter: grayscale(1);
             filter: grayscale(1);
             transition-duration: var(--transition-duration);
+            cursor: pointer;
 
             &:hover {
                 -webkit-filter: grayscale(0);

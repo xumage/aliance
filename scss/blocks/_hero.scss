@@ -62,6 +62,7 @@
         transition-duration: var(--transition-duration);
         position: relative;
         border-bottom: 1px solid var(--color-gray-light);
+        user-select: none;
 
         &:nth-child(1) {
             border-left: 1px solid var(--color-gray-light);

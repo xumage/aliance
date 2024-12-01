@@ -5,6 +5,10 @@
         display: flex;
         flex-wrap: wrap;
 
+        &-svg {
+            transition-duration: var(--transition-duration);
+        }
+
         &-item {
             width: 50%;
             padding: 50px;
@@ -13,9 +17,18 @@
             display: flex;
             filter: grayscale(1);
             transition-duration: var(--transition-duration);
+            position: relative;
 
             &:hover {
                 filter: grayscale(0);
+            }
+
+            &:hover .trademarks__list-title {
+                color: var(--color-accent);
+            }
+
+            &:hover .trademarks__list-svg {
+                fill: var(--color-accent);
             }
 
             @include desktop {
@@ -36,6 +49,12 @@
 
         &-title {
             margin-top: 0;
+        }
+
+        &-link::after {
+            content: "";
+            position: absolute;
+            inset: 0;
         }
 
         &-image {
